@@ -1,13 +1,9 @@
-// let numberPi = 3.1478.toFixed();
-// let numberPi2 = 3.1478.toFixed(2);
-
 let date = new Date(),
-    day = new Date().getDate(),
-    month = new Date().getMonth();
-    month++;
-let year = new Date().getFullYear();
+    day = date.getDate(),
+    month = date.getMonth()+1,
+    year = date.getFullYear();
 
-let captionString = `Food prices for ≠` + ` `+ (day)+ `.` + (month) + `.` + (year);
+let captionString = `Food prices for ≠ ${day}.${month}.${year}`;
 
 console.log(captionString.replaceAll(`≠`, `-`));
 
@@ -18,7 +14,7 @@ let apple = `🍎`,
     appleTotal = (applePrice) * (appleCount),
     appleDiscount = (appleTotal) - (appleTotal / 100 * (appleSalePercent));
 
-console.log(`Final price for` + ` ` + (appleCount) + ` ` + (apple) + ` = ` + (appleDiscount).toFixed() + ` ` + `UAH`);
+console.log(`Final price for ${appleCount} ${apple} = ${appleDiscount.toFixed()} UAH`);
 
 let orange = `🍊`,
     orangePrice = 12,
@@ -27,7 +23,7 @@ let orange = `🍊`,
     orangeTotal = ( orangePrice) * ( orangeCount),
     orangeDiscount = ( orangeTotal) - ( orangeTotal / 100 * (orangeSalePercent));
 
-console.log(`Final price for` + ` ` + (orangeCount) + ` ` + (orange) + ` = ` + (orangeDiscount).toFixed() + ` ` + `UAH`);
+console.log(`Final price for ${orangeCount} ${orange} = ${orangeDiscount.toFixed()} UAH`);
 
 let kiwi = `🥝`,
     kiwiPrice = 15,
@@ -36,8 +32,8 @@ let kiwi = `🥝`,
     kiwiTotal = (kiwiPrice) * (kiwiCount),
     kiwiAllowance = (kiwiTotal) + (kiwiTotal / 100 * (kiwiCountryPercent));
 
-console.log(`Final price for` + ` ` + (kiwiCount) + ` ` + (kiwi) + ` = ` + (kiwiAllowance).toFixed() + ` ` + `UAH`);
+console.log(`Final price for ${kiwiCount} ${kiwi} = ${kiwiAllowance.toFixed()} UAH`);
 
 let allProducts = (appleDiscount) + (orangeDiscount) + (kiwiAllowance);
 
-console.log(`Final price for all products` + ` = ` + allProducts.toFixed() + ` ` + `UAH`);
+console.log(`Final price for all products = ${allProducts.toFixed()} UAH`);
